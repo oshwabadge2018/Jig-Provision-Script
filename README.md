@@ -1,6 +1,6 @@
 # Jig-Provision-Script
 
-## Setup
+## Usage
 The Pi needs to have internet access.
 * Remove SD Card, insert it into a computer
 * Create a file names ` ` in the BOOT partition
