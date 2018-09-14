@@ -2,7 +2,6 @@
 import thorpy
 import subprocess
 
-
 commit = subprocess.check_output(['git', 'show', '--oneline', '-s']).split(" ")[0]
 
 application = thorpy.Application((320, 415), "Badge Programmer")
