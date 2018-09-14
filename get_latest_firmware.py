@@ -15,7 +15,6 @@ class bcolors:
 
 token = open("GH-TOKEN", "r").read()
 token = token.strip()
-print token
 git = Github(token)
 
 org = git.get_organization('oshwabadge2018')
