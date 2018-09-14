@@ -30,11 +30,11 @@ def getNewProv():
   pass
 
 def programDev():
-  launch("python program_device.py")
+  launch("bash badgeprog.sh")
   pass
 
 def provisionDev():
-  launch("./provision_device.py")
+  launch("python provision_device.py")
   pass
 
 division = thorpy.Line.make(size=300, type_="horizontal") 
