@@ -13,7 +13,7 @@ fwver = thorpy.OneLineText.make("Firmware Version   :  %s" % (fwver))
 swver = thorpy.OneLineText.make("Provisioner Version:  %s" % (commit)) 
 
 division = thorpy.Line.make(size=300, type_="horizontal") 
-ProgramDevice = thorpy.Clickable.make("Program Device",size = (280,150))
+ProgramDevice = thorpy.Clickable.make("Program Device",size = (280,100))
 ProvisionDevice = thorpy.Clickable.make("Provision Device",size = (280,100))
 UpdateFirmware = thorpy.Clickable.make("Load Latest Firmware",size = (280,70))
 UpdateProvisioner = thorpy.Clickable.make("Update Provisioner",size = (280,70))
