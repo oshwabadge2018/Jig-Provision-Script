@@ -45,8 +45,10 @@ try:
   print bcolors.ENDC
   if process.returncode==0:
     print bcolors.OKGREEN+"Success!"+bcolors.ENDC
+    time.sleep(5)
   else:
     print bcolors.FAIL+"Success!"+bcolors.ENDC
+    time.sleep(10)
 
 except GithubException:
   print "Could not find a release"
