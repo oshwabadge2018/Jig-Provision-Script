@@ -1,8 +1,9 @@
+#!/usr/bin/python
 import os
 import subprocess
 
 print "Checking for updates.. ",
-command = "git pull origin master"
+command = "git reset --hard origin/master"
 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 process.wait()
 if process.returncode==0:
