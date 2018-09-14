@@ -13,11 +13,32 @@ fwver = vfile.read()
 fwver = thorpy.OneLineText.make("Firmware Version   :  %s" % (fwver)) 
 swver = thorpy.OneLineText.make("Provisioner Version:  %s" % (commit)) 
 
+def getNewFW():
+  print "Fw"
+  pass
+
+
+def getNewProv():
+  print "update prov"
+  pass
+
+def programDev():
+  print "prog"
+  pass
+
+def provisionDev():
+  print "prov"
+  pass
+
 division = thorpy.Line.make(size=300, type_="horizontal") 
-ProgramDevice = thorpy.Clickable.make("Program Device",size = (280,100))
-ProvisionDevice = thorpy.Clickable.make("Provision Device",size = (280,100))
-UpdateFirmware = thorpy.Clickable.make("Load Latest Firmware",size = (280,70))
-UpdateProvisioner = thorpy.Clickable.make("Update Provisioner",size = (280,70))
+ProgramDevice = thorpy.make_button("Program Device",func = programDev)
+ProgramDevice.set_size((280,100))
+ProvisionDevice = thorpy.make_button("Provision Device",func = provisionDev)
+ProvisionDevice.set_size((280,100))
+UpdateFirmware = thorpy.make_button("Load Latest Firmware",func=getNewFW)
+UpdateFirmware.set_size((280,70))
+UpdateProvisioner = thorpy.make_button("Update Provisioner",func=getNewProv)
+UpdateProvisioner.set_size((280,70))
 
 
 
