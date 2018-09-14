@@ -3,6 +3,16 @@ from github import Github,GithubException
 import subprocess
 import os
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 token = open("GH-TOKEN", "r").read()
 token = token.strip()
 print token
@@ -26,16 +36,18 @@ try:
 
   if os.path.isfile("firmware.bin"):
     os.remove("firmware.bin")
+  print bcolors.OKBLUE
   command = "wget %s" % download_url
   process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
   process.wait()
   vfile = open('fwver.txt','w+')
   vfile.write(fwver)
   vfile.close()
+  print bcolors.ENDC
   if process.returncode==0:
-    print "Success!"
+    print bcolors.OKGREEN+"Success!"+bcolors.ENDC
   else:
-    print "Failure!"
+    print bcolors.FAIL+"Success!"+bcolors.ENDC
 
 except GithubException:
   print "Could not find a release"

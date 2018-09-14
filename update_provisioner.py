@@ -21,5 +21,5 @@ if process.returncode==0:
   print bcolors.OKGREEN+"Success!"+bcolors.ENDC
   time.sleep(5)
 else:
-  print bcolors.OKGREEN+"Failure!"+bcolors.ENDC
+  print bcolors.FAIL+"Failure!"+bcolors.ENDC
   time.sleep(10)
