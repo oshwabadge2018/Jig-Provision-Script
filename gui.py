@@ -13,21 +13,26 @@ fwver = vfile.read()
 fwver = thorpy.OneLineText.make("Firmware Version   :  %s" % (fwver)) 
 swver = thorpy.OneLineText.make("Provisioner Version:  %s" % (commit)) 
 
+def launch(command):
+  command = "xterm -fn fixed -fullscreen -e %s" % command
+  process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+  process.wait()
+
 def getNewFW():
-  print "Fw"
+  launch("./get_latest_firmware.py")
   pass
 
 
 def getNewProv():
-  print "update prov"
+  launch("./update_provisioner.py")
   pass
 
 def programDev():
-  print "prog"
+  launch("./program_device.py")
   pass
 
 def provisionDev():
-  print "prov"
+launch("./provision_device.py")
   pass
 
 division = thorpy.Line.make(size=300, type_="horizontal") 
