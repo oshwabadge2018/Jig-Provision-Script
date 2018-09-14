@@ -26,6 +26,7 @@ def getNewFW():
 
 def getNewProv():
   launch("python update_provisioner.py")
+  exit(0)
   pass
 
 def programDev():
