@@ -33,7 +33,7 @@ def programDev():
   pass
 
 def provisionDev():
-launch("./provision_device.py")
+  launch("./provision_device.py")
   pass
 
 division = thorpy.Line.make(size=300, type_="horizontal") 
