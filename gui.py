@@ -20,16 +20,16 @@ def launch(command):
   process.wait()
 
 def getNewFW():
-  launch("./get_latest_firmware.py")
+  launch("python get_latest_firmware.py")
   pass
 
 
 def getNewProv():
-  launch("./update_provisioner.py")
+  launch("python update_provisioner.py")
   pass
 
 def programDev():
-  launch("./program_device.py")
+  launch("python program_device.py")
   pass
 
 def provisionDev():
