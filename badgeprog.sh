@@ -13,7 +13,7 @@ raspi-gpio set $enable dl
 raspi-gpio set $io0    dl
 sleep 1
 raspi-gpio set $enable dh
-python esptool.py --chip esp32 --port /dev/ttyS0 --baud 460800 write_flash -z --flash_mode dio --flash_freq 40m 0x1000 firmware.bin
+python esptool.py --chip esp32 --port /dev/ttyS0 --baud 921600 write_flash -z --flash_mode dio --flash_freq 40m 0x1000 firmware.bin
 
 sleep 5
 
