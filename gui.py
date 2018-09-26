@@ -21,7 +21,7 @@ def launch(command):
 
 def getNewFW():
   launch("python get_latest_firmware.py")
-	exit(0)
+  exit(0)
   pass
 
 
